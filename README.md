@@ -1,5 +1,3 @@
-# la-twitter-feed
-
 ```npm install```
   
  
