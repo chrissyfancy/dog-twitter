@@ -42,12 +42,10 @@ class TwitterFeed extends React.Component {
     })
     return(
       <div>
-      {tweets}
+        {tweets}
       </div>
     )
-
   }
-
 }
 
 export default TwitterFeed;
