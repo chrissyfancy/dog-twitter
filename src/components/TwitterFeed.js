@@ -4,24 +4,21 @@ import Tweet from './Tweet'
 class TwitterFeed extends React.Component {
   constructor(props){
     super(props);
-    this.state={
-      selectedTweetId: null
+    this.state = {
+      selectedTweetId: ''
     }
     this.handleSelectedTweet = this.handleSelectedTweet.bind(this);
   }
 
-  handleSelectedTweet(id){
-    this.setState({ selectedTweetId: id })
+  handleSelectedTweet(tweetId){
+    this.setState({ selectedTweetId: tweetId })
   }
 
   render() {
-    let className;
     let tweets = this.props.data.map(tweet => {
-
-      if(tweet.id_str === this.state.selectedTweetId){
-        className = "selected"
-      } else {
-        className = ""
+      let className = "";
+      if(tweet.id_str === this.state.selectedTweetId) {
+        className = "selected";
       }
 
       let handleClick = () => {
@@ -30,22 +27,23 @@ class TwitterFeed extends React.Component {
 
       return(
         <Tweet
-        key={tweet.id_str}
-        id={tweet.id_str}
-        text={tweet.text}
-        name={tweet.user.name}
-        userPhoto={tweet.user.profile_image_url}
-        handleClick={handleClick}
-        className={className}
+          key={tweet.id_str}
+          id={tweet.id_str}
+          text={tweet.text}
+          name={tweet.user.name}
+          userPhoto={tweet.user.profile_image_url}
+          handleClick={handleClick}
+          className={className}
         />
       )
     })
     return(
       <div>
+        <h1>Dog Twitter</h1>
         {tweets}
       </div>
     )
   }
-}
+};
 
 export default TwitterFeed;

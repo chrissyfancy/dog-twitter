@@ -1,1 +1,19 @@
+.tweet-box{
+  img {
+    max-width: 125px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+  }
+  border: 1px solid black;
+  margin: 2%;
+  padding: 2%;
+}
 
+.user-name {
+  font-weight: bold;
+  padding-left: 2%;
+}
+
+.selected {
+  background-color: blue;
+}

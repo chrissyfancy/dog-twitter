@@ -2,24 +2,6 @@
 @import 'stylesheets/TwitterFeed';
 @import 'stylesheets/Tweet';
 
-.tweet-box{
-  img {
-    max-width: 125px;
-  }
-  border: 1px solid black;
-  margin: 2%;
-  padding: 2%;
-}
-
-.user-name{
-  font-weight: bold;
-  padding-left: 2%;
-}
-
-.selected {
-  background-color: yellow;
-}
-
 h1 {
   text-align: center;
 }
